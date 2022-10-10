@@ -1,3 +1,5 @@
+import netscape.javascript.JSObject;
+import org.json.simple.JSONObject;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -10,7 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.FileWriter;
 import java.time.Duration;
+import java.util.List;
 
 public class Practice_Form {
 
@@ -137,6 +141,24 @@ public class Practice_Form {
         WebElement submitButton= driver.findElement(By.cssSelector("[type=submit]"));
         Thread.sleep(2000);
         action.moveToElement(submitButton).sendKeys(Keys.ENTER).perform();
+
+        //    -------------- Scrap & Print User Data from the Table --------------
+
+        WebElement table =  driver.findElement(By.tagName("tbody"));
+        List<WebElement> allRows = table.findElements(By.tagName("tr"));
+        int i=0;
+        for (WebElement row : allRows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            for (WebElement cell : cells) {
+                i++;
+
+               String print_data= ("num["+i+"] "+ cell.getText());
+
+                System.out.println(print_data);
+
+            }
+
+        }
 
     }
 
