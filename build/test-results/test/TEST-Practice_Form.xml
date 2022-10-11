@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Practice_Form" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-10T20:47:42" hostname="DESKTOP-F8IID4M" time="55.845">
+<testsuite name="Practice_Form" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-11T18:22:11" hostname="DESKTOP-F8IID4M" time="145.123">
   <properties/>
-  <testcase name="formAutomation" classname="Practice_Form" time="40.539"/>
-  <testcase name="getTitle" classname="Practice_Form" time="15.306"/>
+  <testcase name="formAutomation" classname="Practice_Form" time="123.192"/>
+  <testcase name="getTitle" classname="Practice_Form" time="21.931"/>
   <system-out><![CDATA[Female radio button is deselected and Male radio button is selected
-num[1] Student Name
-num[2] Shiddique Shuvo
-num[3] Student Email
-num[4] shiddiqueshuvo@gmail.com
-num[5] Gender
-num[6] Male
-num[7] Mobile
-num[8] 1777696605
-num[9] Date of Birth
-num[10] 05 January,1998
-num[11] Subjects
-num[12] Physics, Maths
-num[13] Hobbies
-num[14] Sports, Reading
-num[15] Picture
-num[16] Shuvo.jpg
-num[17] Address
-num[18] Ashkona, Hajj Camp
-num[19] State and City
-num[20] 
+Student Name
+Shiddique Shuvo
+Student Email
+shiddiqueshuvo@gmail.com
+Gender
+Male
+Mobile
+1777696605
+Date of Birth
+05 January,1998
+Subjects
+Physics, Maths
+Hobbies
+Sports, Reading
+Picture
+Shuvo.jpg
+Address
+Ashkona, Hajj Camp
+State and City
+
 ]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 64930
+Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 64676
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Oct 11, 2022 2:47:46 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Oct 12, 2022 12:22:18 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected upstream dialect: W3C
-Oct 11, 2022 2:47:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Oct 12, 2022 12:22:18 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 106
-Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 62454
+[1665512576.655][SEVERE]: Timed out receiving message from renderer: 10.000
+[1665512576.656][WARNING]: screenshot failed, retrying timeout: Timed out receiving message from renderer: 10.000
+[1665512586.664][SEVERE]: Timed out receiving message from renderer: 10.000
+[1665512596.683][SEVERE]: Timed out receiving message from renderer: 10.000
+[1665512596.684][WARNING]: screenshot failed, retrying timeout: Timed out receiving message from renderer: 10.000
+[1665512606.693][SEVERE]: Timed out receiving message from renderer: 10.000
+Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 65136
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Oct 11, 2022 2:48:25 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Oct 12, 2022 12:24:20 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected upstream dialect: W3C
-Oct 11, 2022 2:48:25 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Oct 12, 2022 12:24:20 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 106
 ]]></system-err>
 </testsuite>

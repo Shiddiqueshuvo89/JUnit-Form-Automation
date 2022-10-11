@@ -1,18 +1,16 @@
 import netscape.javascript.JSObject;
+import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
-import java.io.FileWriter;
+import java.io.*;
 import java.time.Duration;
 import java.util.List;
 
@@ -50,7 +48,7 @@ public class Practice_Form {
 
     //      --------------------Writing on Text Box Areas----------------
     @Test
-    public void formAutomation() throws InterruptedException {
+    public void formAutomation() throws InterruptedException, IOException {
 
         driver.get("https://demoqa.com/automation-practice-form");
         driver.findElement(By.id("firstName")).sendKeys("Shiddique");
@@ -59,6 +57,14 @@ public class Practice_Form {
         driver.findElement(By.id("userEmail")).sendKeys("shiddiqueshuvo@gmail.com");
         Thread.sleep(500);
 
+        //    -------------- Screenshots --------------
+
+        File image =((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(image, new File("./src/test/resources/Screenshots/image.jpg"));
+
+
+        //    -------------- Radio button -> Male / Female --------------
+
         WebElement radioButtonFemale=driver.findElement
                 (By.xpath("//label[contains(text(),'Female')]"));
         radioButtonFemale.click();
@@ -66,18 +72,28 @@ public class Practice_Form {
         WebElement radioButtonMale=driver.findElement
                 (By.xpath("//label[contains(text(),'Male')]"));
         Thread.sleep(1200);
+
         if(!radioButtonMale.isSelected()) {
             radioButtonMale.click();
         }
+
         System.out.println("Female radio button is deselected and Male radio button is selected");
         Thread.sleep(2000);
+
+        //    -------------- Enter User Information --------------
 
         driver.findElement(By.id("userNumber")).sendKeys("1777696605");
         Thread.sleep(1500);
         driver.findElement(By.id("currentAddress")).sendKeys("Ashkona, Hajj Camp");
         Thread.sleep(2000);
 
-        //        ----------------------Date Picker-------------------
+        //    -------------- Screenshots --------------
+
+        File image2 =((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(image2, new File("./src/test/resources/Screenshots/image2.jpg"));
+
+
+        //   ----------------------Date Picker-------------------
 
         WebElement calendarInput= driver.findElement(By.id("dateOfBirthInput"));
         calendarInput.sendKeys(Keys.CONTROL+"a");
@@ -142,6 +158,12 @@ public class Practice_Form {
         Thread.sleep(2000);
         action.moveToElement(submitButton).sendKeys(Keys.ENTER).perform();
 
+        //    -------------- Screenshots --------------
+
+        File submit_form =((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(submit_form, new File("./src/test/resources/Screenshots/submit.jpg"));
+
+
         //    -------------- Scrap & Print User Data from the Table --------------
 
         WebElement table =  driver.findElement(By.tagName("tbody"));
@@ -150,11 +172,26 @@ public class Practice_Form {
         for (WebElement row : allRows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
             for (WebElement cell : cells) {
-                i++;
+               // i++;
 
-               String print_data= ("num["+i+"] "+ cell.getText());
+                // String print_data= ("num["+i+"] "+ cell.getText());
+
+                String print_data= (cell.getText());
 
                 System.out.println(print_data);
+
+//                try {
+//
+//                    PrintStream ps = new PrintStream(new File("./src/test/resources/User.txt"));
+//                    System.setOut(ps);
+//                    ps.print(print_data);
+//
+//                }
+//
+//             catch (FileNotFoundException fx) {
+//                    System.out.println(fx);
+//                }
+
 
             }
 
