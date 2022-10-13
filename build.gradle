@@ -29,17 +29,7 @@ dependencies {
     // https://mvnrepository.com/artifact/commons-io/commons-io
     implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
 
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
-    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.19.0'
 
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4
-    testImplementation group: 'io.qameta.allure', name: 'allure-junit4', version: '2.19.0'
-
-    // https://mvnrepository.com/artifact/org.testng/testng
-    testImplementation group: 'org.testng', name: 'testng', version: '7.6.1'
-
-    // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit-platform
-    implementation group: 'io.qameta.allure', name: 'allure-junit-platform', version: '2.19.0'
 
 
 
